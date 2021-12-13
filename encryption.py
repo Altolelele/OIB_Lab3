@@ -29,7 +29,7 @@ def encryption(setting: dict, iv: bytes):
     encryptor = cipher.encryptor()
     enc_text = encryptor.update(padded_text) + encryptor.finalize()
     print("Исходный текст зашифрован!")
-    # print("Зашифрованный текст:")
-    # print(enc_text)
+    print("Зашифрованный текст:")
+    print(enc_text)
     with open(setting['encrypted_file'], 'wb') as enc_file:
         pickle.dump(enc_text, enc_file)

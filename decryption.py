@@ -30,5 +30,4 @@ def decryption(setting: dict, iv: bytes):
     # print("Дешифрованный текст:")
     # print(res)
     with open(setting['decrypted_file'], 'w') as dec_file:
-        dec_file.write(str(res))
-
+        dec_file.write(res)
